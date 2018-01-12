@@ -1,0 +1,26 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+#root {
+    width: 1000px;
+    height: 550px;
+    background:#bebebe;
+}
+
+#root input {
+    margin: 25px;
+    width: 300px;
+    height: 30px;
+    outline: none;
+    padding: 2px 10px;
+    text-indent: 5px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+}

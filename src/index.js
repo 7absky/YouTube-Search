@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import API from './api_key';
+import './App.css';
 import SearchBar from './components/SearchBar';
 
 const App = function() {
