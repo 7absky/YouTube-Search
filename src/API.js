@@ -11,10 +11,6 @@ let config = {
 };
 
 export default function(options, callback) {
-    if(!options.q) {
-        throw new Error('You have to pass object with q property that stands for search query');
-    }
-
     let params = {...config, ...options};
     console.log(`Search query passed to YouTube Search API: ${options.q}`);
     
