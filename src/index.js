@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import API from './api_key';
+import API from './API';
 import './App.css';
 import SearchBar from './components/SearchBar';
+
+API({q: 'surfboards'}, (data) => console.log(data));
 
 const App = function() {
     return (
