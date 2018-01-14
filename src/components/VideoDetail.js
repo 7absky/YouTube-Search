@@ -11,7 +11,7 @@ const VideoDetail = ({video}) => {
             <div className="VideoContainer">
                 <iframe src={url}></iframe>
             </div>
-            <div className="details">
+            <div className="details panel">
                 <div>
                     <h3>{video.snippet.title}</h3>
                 </div>
