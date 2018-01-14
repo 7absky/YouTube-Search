@@ -16,7 +16,7 @@ export default function(options, callback) {
     }
 
     let params = {...config, ...options};
-    console.log(params);
+    console.log(`Search query passed to YouTube Search API: ${options.q}`);
     
     axios.get(URL, {params})
         .then( (response) => {
@@ -24,5 +24,5 @@ export default function(options, callback) {
         })
         .catch((error) => {
             console.error('An error occured during fetching data from YouTube', error);
-        })
+        });
 }
