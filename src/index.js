@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import API from './API';
@@ -15,16 +16,18 @@ class App extends Component {
             selectedVideo: null
         };
         this.handleVideoSelect = this.handleVideoSelect.bind(this);
+        this.videoSearch = this.videoSearch.bind(this);
+        this.videoSearch('');
+    }
 
-        API( { q: 'surfboards' }, (videos) => {
+    videoSearch(term) {
+        API( { q: term || '' }, (videos) => {
             this.setState( {
                 videos: videos,
                 selectedVideo: videos[0]
             });
         });
-        
     }
-
     handleVideoSelect(video) {
         console.log('clicked');
         this.setState({
@@ -33,9 +36,10 @@ class App extends Component {
     }
 
     render() {
+        const throttleVideoSearch = _.debounce(this.videoSearch, 300);
         return(
             <div className="AppWrapper">
-                <SearchBar />
+                <SearchBar onVideoSearch={throttleVideoSearch} />
                 <div className="ContentWrapper">
                     <VideoList 
                         videos={this.state.videos}
