@@ -1,1 +1,1 @@
-Learning purposes :) 
+Made for learning purposes :) 
