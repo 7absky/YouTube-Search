@@ -1,5 +1,5 @@
 import axios from 'axios';
-import KEY from './api_key';
+import KEY from './apiKey';
 
 const URL = 'https://www.googleapis.com/youtube/v3/search';
 
